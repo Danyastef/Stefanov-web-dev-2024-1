@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.lunch-section {
+    padding: 30px 40px;
+    background-color: #f9f9f9; /* Фон всей секции */
+}
+
+.soup-section >.dish-grid ,
+.main-dishes-section >.dish-grid,
+.drink-section >.dish-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 20px;
+    gap: 10px; /* Отступы между элементами */
+}
+
+
+.soup-section > .dish-grid > .dish-card,
+.main-dishes-section > .dish-grid > .dish-card,
+.drink-section > .dish-grid > .dish-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px; /* Внутренние отступы */
+    border-radius: 35px; /* Радиус закругления */
+    background-color: white; /* Цвет фона */
+    cursor: pointer; /* Вид курсора */
+    margin-bottom: 20px;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13)); /* Тень */
+}
+
+
+.add-button {
+    background-color: #f1eee9;
+    margin-top: 10px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+
+.soup-section > .dish-grid > .dish-card:hover,
+.main-dishes-section > .dish-grid > .dish-card:hover,
+.drink-section > .dish-grid > .dish-card:hover {
+    border: 2px solid tomato; /* Граница при наведении */
+}
+
+
+.soup-section > .dish-grid > .dish-card > img,
+.main-dishes-section > .dish-grid > .dish-card img,
+.drink-section > .dish-grid > .dish-card img {
+    width: 100%; /* Растянуть на всю ширину */
+    border-radius: 35px; /* Закругление изображения */
+}
+
+
+
+.soup-section > .dish-grid > .dish-card > .dish-info,
+.main-dishes-section > .dish-grid > .dish-card > .dish-info,
+.drink-section > .dish-grid > .dish-card > .dish-info {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+    align-items: flex-start; /* Выравнивание по началу */
+}
+
+
+.soup-section > .dish-grid > .dish-card > .dish-info >.price,
+.main-dishes-section > .dish-grid > .dish-card > .dish-info >.price,
+.drink-section > .dish-grid > .dish-card > .dish-info >.price {
+    font-size: 1.5em; /* Увеличить размер шрифта цены */
+}
+
+
+.soup-section > .dish-grid > .dish-card > .dish-info >.name,
+.main-dishes-section > .dish-grid > .dish-card > .dish-info >.name,
+.drink-section > .dish-grid > .dish-card > .dish-info >.name {
+    font-size: 1.5em; /* Увеличить размер шрифта названия */
+}
+
+
+
+.soup-section > .dish-grid > .dish-card > .dish-info >.weight,
+.main-dishes-section > .dish-grid > .dish-card > .dish-info >.weight,
+.drink-section > .dish-grid > .dish-card > .dish-info >.weight {
+    color: gray; /* Серый цвет для веса */
+}
+
+
+button {
+    background-color: #f1eee9; /* Цвет кнопки */
+    margin-top: 10px; /* Обязательный отступ сверху */
+    padding: 10px 30px; /* Внутренние отступы */
+    border-radius: 10px; /* Закругление кнопки */
+    cursor: pointer; /* Вид курсора */
+    transition: background-color 0.3s; /* Плавный переход для кнопки */
+}
+
+.soup-section > .dish-grid > .dish-card:hover button,
+.main-dishes-section > .dish-grid > .dish-card:hover button,
+.drink-section > .dish-grid > .dish-card:hover button {
+    background-color: #aaa6a4ec; /* Изменение цвета кнопки при наведении на карточку */
+}
+
+nav {
+    display: flex; /* Использование флексбокса */
+    flex-wrap: wrap; /* Разрешение на перенос флекс-элементов */
+    gap: 15px; /* Отступы между элементами */
+}
+
+nav ul {
+    list-style: none; /* Убрать маркеры у списка */
+    padding: 0; /* Убрать отступы у списка */
+}
+
+nav li {
+    margin: 0; /* Убрать отступы у элементов списка */
+}
+
+nav a {
+    text-decoration: none; /* Убрать подчеркивание у ссылок */
+    color: black; /* Цвет текста ссылок */
+}
+
+nav a.active {
+    color: tomato; /* Цвет активной ссылки */
+}
+
+
+@media (max-width: 800px) {
+    .dish-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    }
+}
+
+@media (max-width: 600px) {
+    .dish-grid {
+        grid-template-columns: 1fr; /* 1 колонка */
+    }
+
+    h2 {
+        text-align: center; /* Центрирование заголовка */
+    }
+
+    nav {
+        flex-direction: column; /* Вертикальное меню */
+        align-items: center; /* Центрирование элементов меню */
+    }
+}
+
