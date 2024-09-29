@@ -4,22 +4,35 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    padding: 20px;
-    max-width: 800px; 
-    margin: 0 ; 
+    
+    max-width: 100%; 
+}
+main {
+margin-left: 100px;
+
+
+
+
 }
 
 header {
-    text-align: left; 
+    text-align: left;
     margin-bottom: 20px;
+    margin-left:100px;
 }
 
 header h1 {
     font-size: 2em;
     font-weight: bold;
+
 }
 
 nav ul {
@@ -36,50 +49,43 @@ nav ul li a {
     text-decoration: none;
     color: black;
     font-weight: bold;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+    border-bottom: 2px solid #ff6347;
 }
 
 .image-section {
-    text-align: left; 
+    text-align: left;
 }
 
 .main-image {
-    width: 100%;
+    width: 50%;
     height: auto;
     margin-bottom: 20px;
 }
 
-.about {
+.about, .advantages, .top-dishes {
     margin-bottom: 20px;
 }
 
-.about h2 {
+.about h2, .advantages h3, .top-dishes h3 {
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.advantages h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
 .advantages ul {
     list-style-type: disc;
-    padding-left: 20px; 
+    padding-left: 20px;
     margin-bottom: 20px;
 }
 
-.top-dishes {
-    margin-bottom: 20px;
-}
-
-.top-dishes h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
 
 table {
-    width: 100%;
+    width: 45%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
@@ -91,9 +97,11 @@ table th, table td {
 }
 
 footer {
-    background-color: black; 
-    color: white; 
-    text-align: left; 
-    padding: 20px; 
-    font-size: 0.9em; 
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 20px;
+    font-size: 0.9em;
+    left: 0px;
 }
