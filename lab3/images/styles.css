@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    
+    max-width: 100%; 
+}
+main {
+margin-left: 100px;
+}
+
+header {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left:100px;
+}
+
+header h1 {
+    font-size: 2em;
+    font-weight: bold;
+
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+    border-bottom: 2px solid #ff6347;
+}
+
+.image-section {
+    text-align: left;
+}
+
+.main-image {
+    width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.about, .advantages, .top-dishes {
+    margin-bottom: 20px;
+}
+
+.about h2, .advantages h3, .top-dishes h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.advantages ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+table {
+    width: 45%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 20px;
+    font-size: 0.9em;
+    left: 0px;
+}
+
+nav {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 15px; 
+}
+
+nav ul {
+    list-style: none; 
+    padding: 0; 
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none; 
+    color: black; 
+}
+
+nav a.active {
+    color: tomato; 
+}
+@media (max-width: 800px) {
+    #info > .image{
+        width: 500px;
+        height: auto;
+    }
+    
+    .main-menu {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media (max-width: 600px) {
+    h1 {
+        text-align: center;
+    }
+    .main-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-menu a {
+        font-size: calc(100% + 4px);
+    }
+    #info > .image {
+        width: 100%;
+    }
+    table {
+        font-size: calc(100% - 2px);
+    }
+}
+@media (max-width: 400px) {
+    table {
+        font-size: calc(100% - 4px);
+    }
+}

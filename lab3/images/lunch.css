@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Фон всей страницы */
+}
+
+.lunch-section {
+    padding: 30px 40px;
+    background-color: #f9f9f9; /* Фон всей секции */
+}
+
+.soup-section > .dish-grid,
+.main-dishes-section > .dish-grid,
+.drink-section > .dish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Гибкое количество колонок */
+    justify-content: center; /* Центровка по горизонтали */
+    gap: 10px; /* Отступы между элементами */
+}
+
+.soup-section > .dish-grid > .dish-card,
+.main-dishes-section > .dish-grid > .dish-card,
+.drink-section > .dish-grid > .dish-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px; /* Внутренние отступы */
+    border-radius: 35px; /* Радиус закругления */
+    background-color: white; /* Цвет фона */
+    cursor: pointer; /* Вид курсора */
+    margin-bottom: 20px;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13)); /* Тень */
+}
+
+.add-button {
+    background-color: #f1eee9;
+    margin-top: 10px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.soup-section > .dish-grid > .dish-card:hover,
+.main-dishes-section > .dish-grid > .dish-card:hover,
+.drink-section > .dish-grid > .dish-card:hover {
+    border: 2px solid tomato; /* Граница при наведении */
+}
+
+.soup-section > .dish-grid > .dish-card > img,
+.main-dishes-section > .dish-grid > .dish-card img,
+.drink-section > .dish-grid > .dish-card img {
+    width: 100%; /* Растянуть на всю ширину */
+    border-radius: 35px; /* Закругление изображения */
+}
+
+.soup-section > .dish-grid > .dish-card > .dish-info,
+.main-dishes-section > .dish-grid > .dish-card > .dish-info,
+.drink-section > .dish-grid > .dish-card > .dish-info {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+    align-items: flex-start; /* Выравнивание по началу */
+}
+
+.soup-section > .dish-grid > .dish-card > .dish-info > .price,
+.main-dishes-section > .dish-grid > .dish-card > .dish-info > .price,
+.drink-section > .dish-grid > .dish-card > .dish-info > .price {
+    font-size: 1.5em; /* Увеличить размер шрифта цены */
+}
+
+.soup-section > .dish-grid > .dish-card > .dish-info > .name,
+.main-dishes-section > .dish-grid > .dish-card > .dish-info > .name,
+.drink-section > .dish-grid > .dish-card > .dish-info > .name {
+    font-size: 1.5em; /* Увеличить размер шрифта названия */
+}
+
+.soup-section > .dish-grid > .dish-card > .dish-info > .weight,
+.main-dishes-section > .dish-grid > .dish-card > .dish-info > .weight,
+.drink-section > .dish-grid > .dish-card > .dish-info > .weight {
+    color: gray; /* Серый цвет для веса */
+}
+
+button {
+    background-color: #f1eee9; /* Цвет кнопки */
+    margin-top: 10px; /* Обязательный отступ сверху */
+    padding: 10px 30px; /* Внутренние отступы */
+    border-radius: 10px; /* Закругление кнопки */
+    cursor: pointer; /* Вид курсора */
+    transition: background-color 0.3s; /* Плавный переход для кнопки */
+}
+
+.add-button:hover {
+    background-color: #aaa6a4ec; /* Изменение цвета кнопки при наведении на кнопку */
+}
+
+nav {
+    display: flex; /* Использование флексбокса */
+    flex-wrap: wrap; /* Разрешение на перенос флекс-элементов */
+    gap: 15px; /* Отступы между элементами */
+}
+
+nav ul {
+    list-style: none; /* Убрать маркеры у списка */
+    padding: 0; /* Убрать отступы у списка */
+}
+
+nav li {
+    margin: 0; /* Убрать отступы у элементов списка */
+}
+
+nav a {
+    text-decoration: none; /* Убрать подчеркивание у ссылок */
+    color: black; /* Цвет текста ссылок */
+}
+
+nav a.active {
+    color: tomato; /* Цвет активной ссылки */
+}
+
+footer {
+    padding: 20px 0;
+    background-color: #2b2b2b;
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+
+.order-section {
+    width: 50%; /* Ширина формы */
+    padding: 40px;
+    background-color: #fff; /* Цвет фона */
+    border-radius: 15px; /* Закругленные углы */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    border: none; /* Убираем любые черные рамки */
+}
+
+/* Убираем черные рамки и тени у полей */
+.order-section input,
+.order-section select,
+.order-section textarea {
+    border: none; /* Убираем рамки у полей */
+    border-radius: 10px; /* Закругление углов */
+    padding: 15px;
+    width: 100%; /* Ширина на всю форму */
+    font-size: 16px;
+    background-color: #f9f9f9; /* Светлый фон для полей */
+    box-shadow: none; /* Убираем тени и рамки */
+    transition: box-shadow 0.3s ease; /* Плавный переход при фокусе */
+}
+
+.order-section input:focus,
+.order-section select:focus,
+.order-section textarea:focus {
+    box-shadow: 0 0 8px rgba(255, 99, 71, 0.5); /* Тень при фокусе */
+    outline: none;
+}
+
+/* Стили для кнопки */
+.order-section button {
+    background-color: tomato;
+    color: white;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.order-section button:hover {
+    background-color: #e04000;
+}
+
+/* Заголовок формы */
+.order-section h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Убираем разделение между секциями */
+.order-section label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.order-section .section {
+    border: none; /* Убираем все возможные рамки вокруг секций */
+    box-shadow: none; /* Убираем тени */
+    margin-bottom: 20px;
+}
+
+/* Секция времени доставки */
+.order-section .delivery-time-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Убираем любые линии у radio-кнопок */
+.order-section input[type="radio"] {
+    box-shadow: none;
+    border: none;
+}
+
+/* Медиа-запросы для адаптации формы */
+@media (max-width: 768px) {
+    .order-section {
+        width: 80%; /* Более узкая форма на маленьких экранах */
+    }
+}
+
+fieldset {
+    border: 0px;
+}
