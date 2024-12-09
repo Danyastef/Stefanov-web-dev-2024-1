@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Фон всей страницы */
+    
+}
+
+.lunch-section {
+    padding: 30px 40px;
+    background-color: #f9f9f9; /* Фон всей секции */
+    
+}
+
+.soup-section > .dish-grid,
+.mainDish-section > .dish-grid,
+.starter-section >.dish-grid,
+.drink-section > .dish-grid, 
+.desert-section > .dish-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Максимум 3 карточки в ряду */
+    justify-content: center; /* Центровка по горизонтали */
+    gap: 10px; /* Отступы между элементами */
+}
+
+.soup-section > .dish-grid > .dish-card,
+.mainDish-section > .dish-grid > .dish-card,
+.starter-section > .dish-grid > .dish-card,
+.drink-section > .dish-grid > .dish-card,
+.desert-section > .dish-grid > .dish-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px; /* Внутренние отступы */
+    border-radius: 35px; /* Радиус закругления */
+    background-color: white; /* Цвет фона */
+    cursor: pointer; /* Вид курсора */
+    margin-bottom: 20px;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13)); /* Тень */
+    transition: none; /* Убираем любые трансформации */
+}
+
+.add-button {
+    background-color: #f1eee9;
+    margin-top: 10px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.soup-section > .dish-grid > .dish-card:hover,
+.mainDish-section > .dish-grid > .dish-card:hover,
+.starter-section > .dish-grid > .dish-card:hover,
+.drink-section > .dish-grid > .dish-card:hover,
+.desert-section > .dish-grid > .dish-card:hover {
+    border: 2px solid tomato; /* Граница при наведении */
+}
+
+.soup-section > .dish-grid > .dish-card img,
+.mainDish-section > .dish-grid > .dish-card img,
+.starter-section > .dish-grid > .dish-card img,
+.drink-section > .dish-grid > .dish-card img,
+.desert-section > .dish-grid > .dish-card img {
+    width: 100%; /* Растянуть на всю ширину */
+    border-radius: 35px; /* Закругление изображения */
+}
+
+.soup-section > .dish-grid > .dish-card > .dish-info,
+.mainDish-section > .dish-grid > .dish-card > .dish-info,
+.starter-section > .dish-grid > .dish-card > .dish-info,
+.drink-section > .dish-grid > .dish-card > .dish-info,
+.desert-section > .dish-grid > .dish-card > .dish-info {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+    align-items: flex-start; /* Выравнивание по началу */
+    justify-content: space-between;
+    height: 100%; /* Растягиваем содержимое по высоте карточки */
+}
+
+.soup-section > .dish-grid > .dish-card > .dish-info > .price,
+.mainDish-section > .dish-grid > .dish-card > .dish-info > .price,
+.starter-section > .dish-grid > .dish-card > .dish-info > .price,
+.drink-section > .dish-grid > .dish-card > .dish-info > .price,
+.desert-section > .dish-grid > .dish-card > .dish-info > .price {
+    font-size: 1.5em; /* Увеличить размер шрифта цены */
+}
+
+.soup-section > .dish-grid > .dish-card > .dish-info > .name,
+.mainDish-section > .dish-grid > .dish-card > .dish-info > .name,
+.starter-section > .dish-grid > .dish-card > .dish-info > .name,
+.drink-section > .dish-grid > .dish-card > .dish-info > .name,
+.desert-section > .dish-grid > .dish-card > .dish-info > .name {
+    font-size: 1.5em; /* Увеличить размер шрифта названия */
+    min-height: 50px; /* Задаем минимальную высоту для выравнивания карточек */
+}
+
+.soup-section > .dish-grid > .dish-card > .dish-info > .weight,
+.mainDish-section > .dish-grid > .dish-card > .dish-info > .weight,
+.starter-section > .dish-grid > .dish-card > .dish-info > .weight,
+.drink-section > .dish-grid > .dish-card > .dish-info > .weight,
+.desert-section > .dish-grid > .dish-card > .dish-info > .weight {
+    color: gray; /* Серый цвет для веса */
+}
+
+button {
+    background-color: #f1eee9; /* Цвет кнопки */
+    margin-top: 10px; /* Обязательный отступ сверху */
+    padding: 10px 30px; /* Внутренние отступы */
+    border-radius: 10px; /* Закругление кнопки */
+    cursor: pointer; /* Вид курсора */
+    transition: background-color 0.3s; /* Плавный переход для кнопки */
+}
+
+.add-button:hover {
+    background-color: #aaa6a4ec; /* Изменение цвета кнопки при наведении на кнопку */
+}
+
+nav {
+    display: flex; /* Использование флексбокса */
+    flex-wrap: wrap; /* Разрешение на перенос флекс-элементов */
+    gap: 15px; /* Отступы между элементами */
+}
+
+nav ul {
+    list-style: none; /* Убрать маркеры у списка */
+    padding: 0; /* Убрать отступы у списка */
+}
+
+nav li {
+    margin: 0; /* Убрать отступы у элементов списка */
+}
+
+nav a {
+    text-decoration: none; /* Убрать подчеркивание у ссылок */
+    color: black; /* Цвет текста ссылок */
+}
+
+nav a.active {
+    color: tomato; /* Цвет активной ссылки */
+}
+
+footer {
+    padding: 20px 0;
+    background-color: #2b2b2b;
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+    position: relative;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+.order-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две колонки */
+    gap: 20px;
+    width: 80%;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.order-section h2 {
+    grid-column: span 2; /* Заголовок занимает две колонки */
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    
+}
+
+.order-section fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+.order-section legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.order-section label {
+    display: flex;
+    align-items: center; /* Выравнивание чекбоксов и радио-кнопок */
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.order-section input,
+.order-section select,
+.order-section textarea {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.order-section input:focus,
+.order-section select:focus,
+.order-section textarea:focus {
+    box-shadow: 0 0 8px rgba(255, 99, 71, 0.5);
+    outline: none;
+}
+
+.order-section button {
+    grid-column: span 2; /* Кнопки занимают две колонки */
+    background-color: tomato;
+    color: white;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.order-section button:hover {
+    background-color: #e04000;
+}
+
+.order-section .reset-button {
+    background-color: #ccc;
+}
+
+.order-section .reset-button:hover {
+    background-color: #999;
+}
+
+.order-soup,
+.order-mainDish,
+.order-starter,
+.order-drink,
+.order-desert {
+    background-color: #fff; /* Белый фон */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.order-soup h2,
+.order-mainDish h2,
+.order-starter h2,
+.order-drink h2,
+.order-desert h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.order-soup ul,
+.order-mainDish ul,
+.order-starter ul,
+.order-drink ul,
+.order-desert ul {
+    list-style: none;
+    padding: 0;
+}
+
+.order-soup li,
+.order-mainDish li,
+.order-starter li,
+.order-drink li,
+.order-desert li {
+    margin-bottom: 10px; /* Отступы между пунктами */
+    font-size: 1.1em;
+}
+
+.order-soup .total,
+.order-mainDish .total,
+.order-starter .total,
+.order-drink .total,
+.order-desert .total {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-align: right;
+    color: tomato; /* Цвет для суммы */
+}
+
+
+.radio-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px; /* Отступ между строками */
+  }
+
+.checkbox-container label {
+    display: block; /* Текст лейбла на отдельной строке */
+    margin-bottom: 5px; /* Отступ между текстом и чекбоксом */
+}
+
+.checkbox-container input[type="checkbox"] {
+    display: block; /* Чекбокс на отдельной строке */
+}
+
+.radio-container label {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.radio-container input[type="radio"] {
+    appearance: radio;
+    -webkit-appearance: radio;
+    -moz-appearance: radio;
+    margin: 0 8px 0 0; /* Отступ между кнопкой и текстом */
+    width: auto;
+    height: auto;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+.filter-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+.filter-button.active {
+    background-color: #00796b;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+.dish-card {
+    display: block; /* Чтобы все блюда показывались по умолчанию */
+}
+  
+.dish-card.hidden {
+    display: none !important; /* Скрываем блюдо, если оно не подходит под фильтр */
+}
+  
+
+.hidden {
+    display: none;
+  }
+  
+  .dish-section {
+    display: none; /* Секции по умолчанию скрыты */
+  }
+  
+  .dish-section.active {
+    display: block; /* Только активная секция видима */
+  }
+  
+  
+
+
+@media (max-width: 768px) {
+    .order-section {
+        grid-template-columns: 1fr; /* Одна колонка на маленьких экранах */
+    }
+    .order-section button {
+        grid-column: span 1;
+    }
+}
+
+
+/* Медиа-запросы для адаптации формы */
+@media (max-width: 768px) {
+    .order-section {
+        width: 80%; /* Более узкая форма на маленьких экранах */
+    }
+}
+
+@media (max-width: 800px) {
+    .soup-section > .dish-grid,
+    .mainDishes-section > .dish-grid,
+    .drink-section > .dish-grid {
+        grid-template-columns: repeat(2, 1fr); /* Две колонки */
+    }
+}
+
+@media (max-width: 600px) {
+    .soup-section > .dish-grid,
+    .mainDishes-section > .dish-grid,
+    .drink-section > .dish-grid {
+        grid-template-columns: repeat(1, 1fr); /* Одна колонка */
+    }
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+  }
+
+.selected-dish {
+    border: 2px solid tomato;
+}
+
+legend {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }

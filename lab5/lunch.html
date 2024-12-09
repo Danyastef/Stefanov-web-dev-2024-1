@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Собрать ланч</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Основные стили -->
+    <link rel="stylesheet" href="lunch.css"> <!-- Дополнительные стили для страницы «Собрать ланч» -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"> <!-- Подключение шрифта -->
+</head>
+<body>
+    <header>
+        <h1>Food Construct</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">О нас</a></li>
+                <li><a href="lunch.html" class="active">Собрать ланч</a></li>
+                <li><a href="#">Заказы</a></li>
+                <li><a href="lunch.html#footer">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="soup-section" data-category="soup">
+            <h2>Выберите суп</h2>
+            <div class="soup-section">
+                <div class="filters">
+                  <button class="filter-button" data-kind="fish">Рыбный</button>
+                  <button class="filter-button" data-kind="meat">Мясной</button>
+                  <button class="filter-button" data-kind="veg">Вегетарианский</button>
+                </div>
+              </div>
+            <div class="dish-grid">
+                <div class="dish-card" data-price="195" data-kind="veg">
+                    <figure class= images>
+                        <img src="images/gazpacho.jpg" alt="Суп 1">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Гаспачо</p>
+                        <p class="price">195₽</p>
+                        <p class="weight">350 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="185" data-kind="veg">
+                    <figure class=images>
+                        <img src="images/mushroom_soup.jpg" alt="Суп 2">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Грибной суп-пюре</p>
+                        <p class="price">185₽</p>
+                        <p class="weight">330 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="270" data-kind="fish">
+                    <figure class="images">
+                        <img src="images/norwegian_soup.jpg" alt="Суп 3">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Норвежский суп</p>
+                        <p class="price">270₽</p>
+                        <p class="weight">330 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="350" data-kind="fish">
+                    <figure class="images">
+                        <img src="images/tom-yam.jpg" alt="Суп 4">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Том ям с креветками</p>
+                        <p class="price">350₽</p>
+                        <p class="weight">330 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="300" data-kind="meat">
+                    <figure class="images">
+                        <img src="images/solyan.jpg" alt="Суп 5">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Солянка с говядиной</p>
+                        <p class="price">300₽</p>
+                        <p class="weight">330 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="260" data-kind="meat">
+                    <figure class="images">
+                        <img src="images/utka.jpg" alt="Суп 6">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Суп с томлёной уткой</p>
+                        <p class="price">260₽</p>
+                        <p class="weight">330 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+            </div>  
+        </section>
+
+        <section class="mainDish-section" data-category="mainDish">
+            <h2>Выберите главное блюдо</h2>
+            <div class="mainDish-section">
+                <div class="filters">
+                  <button class="filter-button" data-kind="fish">Рыбное</button>
+                  <button class="filter-button" data-kind="meat">Мясное</button>
+                  <button class="filter-button" data-kind="veg">Вегетарианское</button>
+                </div>
+                <div class="dish-grid">
+                </div>
+              </div>
+            <div class="dish-grid">
+                <div class="dish-card" data-price="150" data-kind="veg">
+                    <figure class="images">
+                        <img src="images/friedpotatoeswithmushrooms1.jpg" alt="Блюдо 1">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Жареная картошка с грибами</p>
+                        <p class="price">150₽</p>
+                        <p class="weight">250 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="385" data-kind="veg">
+                    <figure class="images">
+                        <img src="images/lasagna.jpg" alt="Блюдо 2">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Лазанья</p>
+                        <p class="price">385₽</p>
+                        <p class="weight">310 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="225" data-kind="meat">
+                    <figure class="images">
+                        <img src="images/chickencutletsandmashedpotatoes.jpg" alt="Блюдо 3">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Котлеты из курицы с картофельным пюре</p>
+                        <p class="price">225₽</p>
+                        <p class="weight">280 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="500" data-kind="meat">
+                    <figure class="images">
+                        <img src="images/tel-z.jpg" alt="Блюдо 4">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Телятина по-цюрихски</p>
+                        <p class="price">500₽</p>
+                        <p class="weight">400 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="800" data-kind="fish">
+                    <figure class="images">
+                        <img src="images/losos.jpg" alt="Блюдо 5">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Стейк из лосося с овощами</p>
+                        <p class="price">800₽</p>
+                        <p class="weight">450 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="750" data-kind="fish">
+                    <figure class="images">
+                        <img src="images/midii.jpg" alt="Блюдо 6">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Мидии в винно-сливочном соусе</p>
+                        <p class="price">750₽</p>
+                        <p class="weight">400 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="starter-section" data-category="starter">
+            <h2>Выберите салат или стартер</h2>
+            <div class="starter-section">
+                <div class="filters">
+                  <button class="filter-button" data-kind="fish">Рыбное</button>
+                  <button class="filter-button" data-kind="meat">Мясное</button>
+                  <button class="filter-button" data-kind="veg">Вегетарианское</button>
+                </div>
+                <div class="dish-grid">
+                </div>
+              </div>
+            <div class="dish-grid">
+                <div class="dish-card" data-price="230" data-kind="meat">
+                    <figure class="images">
+                        <img src="images/cezar.jpg" alt="Стартер 1">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Салат цезарь с курицей</p>
+                        <p class="price">230₽</p>
+                        <p class="weight">280 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="295" data-kind="meat">
+                    <figure class="images">
+                        <img src="images/salat-gov.jpg" alt="Стартер 2">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Салат с говядиной и баклажанами</p>
+                        <p class="price">295₽</p>
+                        <p class="weight">310 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="450" data-kind="fish">
+                    <figure class="images">
+                        <img src="images/salat-osmi.jpg" alt="Стартер 3">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Тёплый салат с картофелем и осминогом</p>
+                        <p class="price">450₽</p>
+                        <p class="weight">320 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="380" data-kind="fish">
+                    <figure class="images">
+                        <img src="images/karpacho.jpg" alt="Стартер 4">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Карпаччо из креветок</p>
+                        <p class="price">380₽</p>
+                        <p class="weight">200 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="230" data-kind="veg">
+                    <figure class="images">
+                        <img src="images/kaprize.jpg" alt="Стартер 5">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Салат капрезе с моцареллой</p>
+                        <p class="price">230₽</p>
+                        <p class="weight">230 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="250" data-kind="veg">
+                    <figure class="images">
+                        <img src="images/tikva.jpg" alt="Стартер 6">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Тыквенный салат</p>
+                        <p class="price">250₽</p>
+                        <p class="weight">210 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="drink-section" data-category="drink">
+            <h2>Выберите напиток</h2>
+            <div class="drink-section">
+                <div class="filters">
+                  <button class="filter-button" data-kind="cold">Холодный</button>
+                  <button class="filter-button" data-kind="hot">Горячий</button>
+                </div>
+                <div class="dish-grid">
+                  <!-- Карточки блюд -->
+                </div>
+              </div>
+            <div class="dish-grid">
+                <div class="dish-card" data-price="120" data-kind="cold">
+                    <figure class="images">
+                        <img src="images/orangejuice.jpg" alt="Напиток 1">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Апельсиновый сок</p>
+                        <p class="price">120₽</p>
+                        <p class="weight">300 мл</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="90" data-kind="cold">
+                    <figure class=images>
+                        <img src="images/applejuice.jpg" alt="Напиток 2">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Яблочный сок</p>
+                        <p class="price">90₽</p>
+                        <p class="weight">300 мл</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="110" data-kind="cold">
+                    <figure class=images>
+                        <img src="images/carrotjuice.jpg" alt="Напиток 3">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Морковный сок</p>
+                        <p class="price">110₽</p>
+                        <p class="weight">300 мл</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="250" data-kind="hot">
+                    <figure class=images>
+                        <img src="images/tlatte.jpg" alt="Напиток 4">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Тыквенный латте</p>
+                        <p class="price">250₽</p>
+                        <p class="weight">400 мл</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="180" data-kind="hot">
+                    <figure class=images>
+                        <img src="images/btea.jpg" alt="Напиток 5">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Чёрный чай</p>
+                        <p class="price">180₽</p>
+                        <p class="weight">400 мл</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="180" data-kind="hot">
+                    <figure class=images>
+                        <img src="images/gtea.jpg" alt="Напиток 6">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Зеленый чай</p>
+                        <p class="price">180₽</p>
+                        <p class="weight">400 мл</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="desert-section" data-category="desert">
+            <h2>Выберите десерт</h2>
+            <div class="desert-section">
+                <div class="filters">
+                  <button class="filter-button" data-kind="small">маленькая порция</button>
+                  <button class="filter-button" data-kind="mid">средняя порция</button>
+                  <button class="filter-button" data-kind="big">большая порция</button>
+                </div>
+                <div class="dish-grid">
+                </div>
+              </div>
+            <div class="dish-grid">
+                <div class="dish-card" data-price="270" data-kind="small">
+                    <figure class="product-image">
+                        <img src="images/napoleon.jpg" alt="Десерт 1">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Торт Наполеон</p>
+                        <p class="price">270₽</p>
+                        <p class="weight">140 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="290" data-kind="small">
+                    <figure class="product-image">
+                        <img src="images/medovik.jpg" alt="Десерт 2">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Торт Медовик</p>
+                        <p class="price">290₽</p>
+                        <p class="weight">150 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="400" data-kind="mid">
+                    <figure class="images">
+                        <img src="images/sirniki.jpg" alt="Десерт 3">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Сырники</p>
+                        <p class="price">400₽</p>
+                        <p class="weight">350 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="700" data-kind="big">
+                    <figure class="images" >
+                        <img src="images/ponchiki.jpg" alt="Десерт 4">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Пончики</p>
+                        <p class="price">700₽</p>
+                        <p class="weight">500 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="260" data-kind="small">
+                    <figure class="images">
+                        <img src="images/chizkeyk.jpg" alt="Десерт 5">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Чизкейк</p>
+                        <p class="price">260₽</p>
+                        <p class="weight">120 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+                <div class="dish-card" data-price="320"data-kind="mid">
+                    <figure class="images">
+                        <img src="images/profit.jpg" alt="Десерт 6">
+                    </figure>
+                    <div class="dish-info">
+                        <p class="name">Профитроли</p>
+                        <p class="price">320₽</p>
+                        <p class="weight">280 г</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Блок формы заказа -->
+        <!-- Блок формы заказа -->
+<section class="order-section">
+    <h2>Форма заказа</h2>
+    <form action="https://httpbin.org/post" method="POST">
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <!-- Колонка с заказом -->
+            <fieldset class="client-order">
+                <legend>Ваш заказ</legend>
+                <div id="no-selection">Ничего не выбрано</div>
+                <fieldset id="order-summary" style="display: none;" class="client-order">
+                    <div class="form-group">
+                        <label style="font-weight: bold;">Суп</label>
+                        <p id="order-soup">Суп не выбран</p>
+                        <input type="hidden" id="hidden-soup" name="soup" value="">
+                    </div>
+                    <div class="form-group">
+                        <label style="font-weight: bold;">Главное блюдо</label>
+                        <p id="order-mainDish">Блюдо не выбрано</p>
+                        <input type="hidden" id="hidden-mainDish" name="mainDish" value="">
+                    </div>
+                    <div class="form-group">
+                        <label style="font-weight: bold;">Салат</label>
+                        <p id="order-starter">Салат не выбран</p>
+                        <input type="hidden" id="hidden-starter" name="starter" value="">
+                    </div>
+                    <div class="form-group">
+                        <label style="font-weight: bold;">Напиток</label>
+                        <p id="order-drink">Напиток не выбран</p>
+                        <input type="hidden" id="hidden-drink" name="drink" value="">
+                    </div>
+                    <div class="form-group">
+                        <label style="font-weight: bold;">Десерт</label>
+                        <p id="order-desert">Десерт не выбран</p>
+                        <input type="hidden" id="hidden-desert" name="desert" value="">
+                    </div>
+                    <!-- Секция для отображения общей суммы заказа -->
+                    <div class="form-group">
+                        <label style="font-weight: bold;">Сумма заказа</label>
+                        <p id="order-price">Сумма заказа: 0 ₽</p>
+                        <input type="hidden" id="hidden-price" name="price" value="0">
+                    </div>
+                </fieldset>
+            </fieldset>
+        </div>
+                        <div class="form-group">
+                            <label for="comments">Комментарий к заказу</label>
+                            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+                        </div>
+                    </fieldset>
+                    <!-- Колонка с данными клиента -->
+                    <fieldset style="flex: 1;">
+                        <legend>Данные клиента</legend>
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name" name="name" required>
+        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <div class="checkbox-container">
+                            <label for="newsletter">Подписаться на рассылку</label>
+                            <input type="checkbox" id="newsletter" name="newsletter" checked>
+                        </div>
+                        
+        
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" id="phone" name="phone" required>
+        
+                        <label for="address">Адрес:</label>
+                        <input type="text" id="address" name="address" required>
+        
+                        <fieldset>
+                            <legend>Время доставки:</legend>
+                            <div class="radio-container">
+                              <input type="radio" id="morning" name="delivery-time" value="morning">
+                              <label for="morning">Как можно скорее</label>
+                            </div>
+                            <div class="radio-container">
+                              <input type="radio" id="day" name="delivery-time" value="day">
+                              <label for="day">К указанному времени</label>
+                            </div>
+                          </fieldset>
+                        
+        
+                        <label for="delivery-time">Укажите время доставки:</label>
+                        <input type="time" id="delivery-time" name="delivery_time" min="08:00" max="22:00" required>
+                    </fieldset>
+                </div>
+                <div style="margin-top: 20px;">
+                    <button type="submit">Отправить заказ</button>
+                    <button type="reset">Сбросить</button>
+                </div>
+            </form>
+        </section>
+    </main>
+     
+    <footer id="footer">
+        <p>Контактные данные: foodconstruct@gmail.com | +7 (123) 456-78-90</p>
+        <p>© 2024 Foot Construct. Все права защищены.</p>
+    </footer>
+    <script src="lunch.js"></script>   
+</body>
+</html>
