@@ -1,0 +1,526 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+
+
+/* Стили для хедера */
+header {
+    background-color: #ffffff;
+    color: white;
+    padding: 10px 0;
+
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header-container .logo img {
+    width: 200px;
+}
+
+.header-container .search-bar {
+    margin: 0 auto; /* Центрируем строку поиска */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрируем содержимое */
+    width: 60%; /* Ограничиваем ширину строки поиска */
+}
+
+.header-container .search-bar input {
+    width: 100%; /* Занимает всю ширину родителя */
+    max-width: 600px; /* Максимальная ширина для ограничения размера */
+    height: 25px; /* Увеличиваем высоту строки поиска */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.header-container .search-bar button {
+    height: 35px; /* Совпадает с высотой input */
+    padding: 0 25px; /* Делаем кнопку компактной */
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+
+
+
+.header-icons img {
+    width: 54px;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.header-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Контейнер для всего контента */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Чтобы содержимое могло оборачиваться на разные строки */
+    gap: 20px;
+    padding: 20px;
+}
+/* Стили для уведомлений */
+.notifications {
+    width: 100%; /* Уведомление занимает всю ширину страницы */
+    background-color: aquamarine; /* Фон уведомления */
+    padding: 10px 20px; /* Отступы внутри уведомления */
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение контента */
+    align-items: center; /* Центрирование по вертикали */
+    font-size: large; /* Размер шрифта */
+    box-sizing: border-box; /* Учитываем отступы и границы в ширине */
+    position: sticky; /* Фиксируем уведомление в верхней части экрана */
+    left: 0; /* Привязываем уведомление к левому краю */
+    z-index: 1000; /* Отображение поверх других элементов */
+}
+
+.notifications button {
+    border: none; /* Убираем границу кнопки */
+    background-color: transparent; /* Прозрачный фон кнопки */
+    color: black; /* Цвет текста кнопки */
+    font-size: large; /* Размер шрифта кнопки */
+    cursor: pointer; /* Указатель при наведении */
+    padding: 0 10px; /* Отступы внутри кнопки */
+    margin-left: 1500px;
+}
+
+.notifications button:hover {
+    color: red; /* Изменение цвета текста кнопки при наведении */
+}
+
+/* Стили для бокового меню (сайдбара) */
+.sidebar {
+    width: 250px;
+    background: #fff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column; /* Элементы выстраиваются вертикально */
+    gap: 15px; /* Расстояние между элементами */
+    flex-shrink: 0; /* Запрещаем сжать этот элемент */
+}
+
+/* Заголовки в сайдбаре */
+.sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #343a40;
+}
+
+/* Элементы формы в сайдбаре */
+.sidebar label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    margin: 10px;
+}
+
+.sidebar input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Скрываем стандартный чекбокс */
+.sidebar input[type="checkbox"] {
+    appearance: none; /* Убираем стандартный стиль */
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc; /* Рамка чекбокса */
+    border-radius: 4px; /* Закругленные углы */
+    background-color: #fff; /* Фон чекбокса */
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Внешний вид при наведении */
+.sidebar input[type="checkbox"]:hover {
+    border-color: #666; /* Цвет рамки при наведении */
+}
+
+/* Внешний вид при выборе чекбокса */
+.sidebar input[type="checkbox"]:checked {
+    background-color: #000000; /* Фон при выбранном чекбоксе */
+    border-color: #000000; /* Цвет рамки */
+}
+
+/* Добавляем галочку при выборе */
+.sidebar input[type="checkbox"]:checked::after {
+    content: '✔'; /* Символ галочки */
+    font-size: 12px;
+    color: #fff; /* Цвет галочки */
+    position: absolute; /* Абсолютное позиционирование */
+    top: 50%; /* Центр по вертикали */
+    left: 50%; /* Центр по горизонтали */
+    transform: translate(-50%, -50%); /* Сдвигаем на половину ширины/высоты */
+}
+
+
+.sidebar input[type="number"] {
+    width: 100%; /* Полная ширина для числовых полей */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Кнопка в сайдбаре */
+.sidebar button {
+    padding: 10px 15px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    align-self: flex-start; /* Кнопка выровнена по левому краю */
+    margin: 10px;
+}
+
+
+/* Стили для каталога */
+.catalog {
+    flex: 1; /* Каталог занимает оставшееся место */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Заголовок каталога и сортировка */
+.catalog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catalog-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #343a40;
+}
+
+.catalog-header select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Стили для товара в каталоге */
+.catalog-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 карточки в ряду */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Карточки товара */
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200px; /* Фиксированная высота для изображения */
+    object-fit: cover; /* Сохраняем пропорции изображения */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    height: 40px; /* Фиксированная высота для заголовка */
+    overflow: hidden; /* Скрываем лишний текст, если он не помещается */
+    text-overflow: ellipsis; /* Добавляем многоточие, если текст слишком длинный */
+    display: -webkit-box; /* Для работы с несколькими строками */
+    -webkit-line-clamp: 2; /* Максимум 2 строки текста */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация для текста */
+}
+
+.product-card .rating {
+    font-size: 14px;
+    margin-bottom: 10px;
+    height: 20px; /* Фиксированная высота для рейтинга */
+    display: flex;
+
+}
+
+.product-card .price {
+
+    color: black;
+    margin-right: 8px;
+}
+
+.product-card .price-discounted {
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+}
+
+
+.product-card button {
+    margin: 8px 12px;
+    padding: 8px 12px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+/* Кнопка "Загрузить ещё" */
+.load-more {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+/* Футер */
+footer {
+    background: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Стили для подсказок в строке поиска */
+.suggestions-box {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    max-height: 200px; /* Ограничиваем высоту */
+    overflow-y: auto; /* Добавляем прокрутку, если подсказок много */
+}
+
+.suggestion-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.suggestion-item:active {
+    background-color: #e0e0e0;
+}
+
+/* Стили для пустого состояния */
+.suggestions-box:empty {
+    display: none;
+}
+
+
+
+/* Адаптивные стили */
+
+/* Общие настройки для небольших экранов */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    /* Хедер */
+    .header-container {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .header-container .logo img {
+        width: 150px;
+    }
+
+    .header-container .search-bar {
+        width: 100%; /* Полная ширина строки поиска */
+    }
+
+    .header-container .search-bar input {
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .header-container .header-icons img {
+        width: 40px;
+    }
+
+    /* Уведомления */
+    .notifications {
+        font-size: 14px;
+        flex-direction: column; /* Элементы выстраиваются вертикально */
+        text-align: center;
+    }
+
+    .notifications button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    /* Основной контейнер */
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Сайдбар */
+    .sidebar {
+        width: 100%; /* Полная ширина для мобильных устройств */
+        border-right: none; /* Убираем правую границу */
+        border-bottom: 1px solid #ddd; /* Разделяем сайдбар снизу */
+        flex-direction: row; /* Горизонтальное расположение для экономии места */
+        flex-wrap: wrap; /* Оборачивание элементов */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .sidebar label {
+        flex: 1; /* Все элементы равномерно распределяются */
+        font-size: 12px;
+    }
+
+    .sidebar h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+
+    .sidebar button {
+        align-self: center;
+        font-size: 14px;
+    }
+
+    /* Каталог */
+    .catalog-header {
+        flex-direction: column; /* Элементы выстраиваются вертикально */
+        align-items: flex-start; /* Выравниваем по левому краю */
+        gap: 10px;
+    }
+
+    .catalog-items {
+        grid-template-columns: repeat(2, 1fr); /* 2 карточки в ряду */
+    }
+
+    .product-card {
+        padding: 10px;
+    }
+
+    .product-card img {
+        height: 150px; /* Уменьшаем высоту для мобильных */
+    }
+
+    .product-card h3 {
+        font-size: 16px;
+    }
+
+    .product-card button {
+        font-size: 14px;
+    }
+
+    /* Кнопка "Загрузить ещё" */
+    .load-more {
+        font-size: 14px;
+    }
+}
+
+/* Дополнительные стили для очень маленьких экранов */
+@media (max-width: 480px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-container .logo img {
+        width: 120px;
+    }
+
+    .catalog-items {
+        grid-template-columns: 1fr; /* 1 карточка в ряду */
+    }
+
+    .product-card img {
+        height: 120px; /* Ещё меньше для самых узких экранов */
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}

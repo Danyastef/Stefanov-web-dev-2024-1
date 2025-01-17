@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Логотип">
+            </div>
+            <div class="header-icons">
+                <a href="index.html">
+                    <img src="images/main_menu.png" alt="Меню" style="cursor: pointer;">
+                </a>
+                <a href="korzina.html">
+                    <img src="images/korzina.png" alt="Корзина" style="cursor: pointer;">
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="notifications" id="notifications" style="display: none;">
+    </div>
+    <main>
+        <div class="wrapper">
+            <div class="tablesel">
+                <h2>Заказы</h2>
+                <table class="orders-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Дата</th>
+                            <th>Товары</th>
+                            <th>Итоговая стоимость</th>
+                            <th>Доставка</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders-tbody">
+                        <!-- Заказы будут добавляться динамически -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="order-details-modal" class="modal" style="display:none;">
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <div id="order-edit"></div>
+                        <div id="order-details"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="delete-confirm-modal" class="modal" style="display: none;">
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close-button" style="cursor: pointer;">&times;</span>
+                        <p><strong>Удаление заказа</strong></p>
+                        <p>Вы уверены, что хотите удалить заказ?</p>
+                        <div class="actions">
+                            <button id="cancel-delete-btn" class="cancel-btn">Отмена</button>
+                            <button id="confirm-delete-btn" class="confirm-btn">Да</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="order-details-modal" class="modal" style="display:none;">
+            <div class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2>Детали заказа</h2>
+                    <div id="order-details"></div>
+                </div>
+            </div> 
+        </div>
+        <div id="edit-order-modal" class="modal">
+            <div class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2>Редактировать заказ</h2>
+                    <form id="edit-order-form">
+                        <label>Имя: <input type="text" name="full_name" required></label>
+                        <label>Телефон: <input type="text" name="phone" required></label>
+                        <label>Email: <input type="email" name="email"></label>
+                        <label>Адрес доставки: <input type="text" name="delivery_address"></label>
+                        <label>Дата доставки: <input type="date" name="delivery_date"></label>
+                        <label>Время доставки: <select name="delivery_interval" id="delivery_interval">
+                            <option >08:00-12:00</option>
+                            <option >12:00-14:00</option>
+                            <option >14:00-18:00</option>
+                            <option >18:00-22:00</option>
+                        </select></label>
+                        <label>Комментарий: <textarea name="comment"></textarea></label>
+                        <button type="submit">Сохранить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 CartWave. Все права защищены.</p>
+    </footer>
+    <script src="profile.js"></script>
+
+</body>
+</html>
