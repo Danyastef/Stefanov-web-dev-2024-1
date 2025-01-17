@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CartWave</title>
+    <link rel="stylesheet" href="korzina.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Логотип">
+            </div>
+            
+            <div class="header-icons">
+                <a href="index.html">
+                    <img src="images/main_menu.png" alt="Меню" style="cursor: pointer;">
+                </a>
+                <a href="profile.html">
+                    <img src="images/profile.png" alt="Профиль" style="cursor: pointer;">
+                </a>
+                
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1 class="cart-title">Корзина</h1>
+        <div class="catalog">
+            <div class="cart-container">
+                <div class="cart-items">
+                    <!-- Карточки товаров будут добавляться сюда -->
+                </div>
+            </div>
+            <div class="order-section">
+                <h2>Оформление заказа</h2>
+                <form id="orderForm" class="grid-form" action="https://httpbin.org/post" method="POST">
+                    <div class="column">
+                        <div class="form-row">
+                            <label for="name">Имя</label>
+                            <input type="text" id="name" name="name" placeholder="Ваше имя..." required>
+                        </div>
+                        <div class="form-row">
+                            <label for="phone">Номер телефона</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Ваш номер телефона..." required>
+                        </div>
+                        <div class="form-row">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Ваш email..." required>
+                        </div>
+                        <div class="form-row">
+                            <label for="address">Адрес доставки</label>
+                            <input type="text" id="address" name="address" placeholder="Ваш адрес доставки..." required>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="form-row">
+                            <label for="delivery-date">Дата доставки:</label>
+                            <input type="date" name="delivery-date" id="delivery-date">
+                        </div>
+                        <div class="form-row">
+                            <label for="delivery-time">Временной интервал доставки:</label>
+                            <select name="delivery-time" id="delivery-time">
+                                <option >08:00-12:00</option>
+                                <option >12:00-14:00</option>
+                                <option >14:00-18:00</option>
+                                <option >18:00-22:00</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <label for="comment">Комментарий</label>
+                            <textarea id="comment" name="comment" placeholder="Введите комментарий"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <input type="checkbox" id="subscribe" name="subscribe">
+                            <label for="subscribe">Подписаться на рассылку</label>
+                        </div>
+                    </div>
+                    <div class="summary-row">
+                        <div class="form-total">
+                            Итоговая стоимость: <span>0.00₽</span>
+                        </div>
+                        <div class="delivery-cost">
+                            Стоимость доставки: <span>0.00₽</span>
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="reset">Сбросить</button>
+                        <button type="submit">Оформить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 CartWave. Все права защищены.</p>
+    </footer>
+    <script src="korzina.js"></script>
+</body>
+</html>
