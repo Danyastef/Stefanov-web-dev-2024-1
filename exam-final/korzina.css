@@ -1,0 +1,413 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    color: #333;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Выровнять элементы по вертикали */
+    min-height: 100%; /* Обеспечивает, чтобы контейнер растягивался на весь экран */
+}
+
+main {
+    display: flex;
+    flex-grow: 1; /* Это заставит основное содержимое занимать все пространство */
+    flex-direction: column; /* Размещение контента по вертикали */
+}
+
+footer {
+    background: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Автоматический отступ для футера, чтобы он был всегда внизу */
+    
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 28px;
+    color: #343a40;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="reset"] {
+    background-color: #6c757d;
+}
+
+button[type="reset"]:hover {
+    background-color: #5a6268;
+}
+
+/* Стили для хедера */
+header {
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header-container .logo img {
+    width: 200px;
+}
+
+.header-container .search-bar {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.header-container .search-bar input {
+    width: 100%;
+    max-width: 600px;
+    height: 25px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.header-container .search-bar button {
+    height: 35px;
+    padding: 0 25px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.header-icons img {
+    width: 54px;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.header-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Футер */
+
+
+/* Стили карточек товара */
+.product-card, .cart-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover, .cart-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img, .cart-item img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card h3, .cart-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.product-card .rating, .product-card .price, .cart-item .price {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.product-card button, .cart-item .remove-btn {
+    margin: 8px 12px;
+    padding: 8px 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.cart-item .remove-btn {
+    background-color: #dc3545;
+}
+
+.cart-item .remove-btn:hover {
+    background-color: #bd2130;
+}
+
+/* Контейнеры */
+.catalog, .cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.cart-item {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+}
+
+/* Форма оформления заказа */
+.order-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.order-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grid-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.grid-form .column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-row label {
+    font-weight: bold;
+}
+
+.form-row input, .form-row textarea, .form-row select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 50px;
+}
+
+.summary-row {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.form-buttons {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Стили для цен */
+.price-original {
+    text-decoration: line-through;
+    color: #6c757d; /* Цвет зачеркнутой цены */
+}
+
+.price-discount {
+    color: red; /* Красный цвет для новой цены */
+    font-weight: bold;
+}
+
+.discount-percent {
+    color: red; /* Красный цвет для процента скидки */
+    font-weight: bold;
+}
+
+/* Стили для уведомлений */
+.notifications {
+    width: 100%; /* Уведомление занимает всю ширину страницы */
+    background-color: aquamarine; /* Фон уведомления */
+    padding: 10px 20px; /* Отступы внутри уведомления */
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение контента */
+    align-items: center; /* Центрирование по вертикали */
+    font-size: large; /* Размер шрифта */
+    box-sizing: border-box; /* Учитываем отступы и границы в ширине */
+    position: sticky; /* Фиксируем уведомление в верхней части экрана */
+    left: 0; /* Привязываем уведомление к левому краю */
+    z-index: 1000; /* Отображение поверх других элементов */
+}
+
+.notifications button {
+    border: none; /* Убираем границу кнопки */
+    background-color: transparent; /* Прозрачный фон кнопки */
+    color: black; /* Цвет текста кнопки */
+    font-size: large; /* Размер шрифта кнопки */
+    cursor: pointer; /* Указатель при наведении */
+    padding: 0 10px; /* Отступы внутри кнопки */
+    margin-left: 1500px;
+}
+
+.notifications button:hover {
+    color: red; /* Изменение цвета текста кнопки при наведении */
+}
+
+.close-btn {
+    border: none; /* Убираем границу кнопки */
+    background-color: transparent; /* Прозрачный фон кнопки */
+    color: black; /* Цвет текста кнопки */
+    font-size: large; /* Размер шрифта кнопки */
+    cursor: pointer; /* Указатель при наведении */
+    padding: 0 10px; /* Отступы внутри кнопки */
+    margin-left: 1500px;
+}
+
+.close-btn:hover {
+    color: red; /* Изменение цвета при наведении */
+}
+
+
+
+
+/* Медиа-запросы */
+/* Адаптация для устройств с шириной экрана до 768px (планшеты и мобильные) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-container .logo img {
+        width: 150px;
+    }
+
+    .header-icons img {
+        width: 40px;
+        margin: 10px;
+    }
+
+    .catalog, .cart-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .order-section {
+        padding: 15px;
+    }
+
+    .grid-form {
+        grid-template-columns: 1fr; /* Одна колонка для полей */
+        gap: 15px;
+    }
+
+    .summary-row, .form-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-buttons {
+        justify-content: center;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Адаптация для устройств с шириной экрана до 480px (маленькие мобильные устройства) */
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-row label {
+        font-size: 0.9rem;
+    }
+
+    .form-row input, .form-row textarea, .form-row select {
+        font-size: 0.6rem;
+    }
+
+    .header-container .logo img {
+        width: 120px;
+    }
+
+    .header-icons img {
+        width: 30px;
+    }
+
+    .notifications {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+}

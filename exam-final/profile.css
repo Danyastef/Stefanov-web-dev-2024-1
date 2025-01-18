@@ -1,0 +1,439 @@
+
+/* Стили для хедера */
+header {
+    background-color: #ffffff;
+    color: white;
+    padding: 10px 0;
+
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Выровнять элементы по вертикали */
+    min-height: 100%; /* Обеспечивает, чтобы контейнер растягивался на весь экран */
+}
+
+main {
+    display: flex;
+    flex-grow: 1; /* Это заставит основное содержимое занимать все пространство */
+    flex-direction: column; /* Размещение контента по вертикали */
+}
+
+footer {
+    background: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Автоматический отступ для футера, чтобы он был всегда внизу */
+    
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header-container .logo img {
+    width: 200px;
+}
+
+.header-container .search-bar {
+    margin: 0 auto; /* Центрируем строку поиска */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрируем содержимое */
+    width: 60%; /* Ограничиваем ширину строки поиска */
+}
+
+.header-container .search-bar input {
+    width: 100%; /* Занимает всю ширину родителя */
+    max-width: 600px; /* Максимальная ширина для ограничения размера */
+    height: 25px; /* Увеличиваем высоту строки поиска */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.header-container .search-bar button {
+    height: 35px; /* Совпадает с высотой input */
+    padding: 0 25px; /* Делаем кнопку компактной */
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header-icons img {
+    width: 54px;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.header-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+
+
+/* Основной контент */
+.wrapper {
+    width: 90%;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tablesel {
+    overflow-x: auto;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.orders-table th, .orders-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.orders-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Модальные окна */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 40%;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.cancel-btn, .confirm-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cancel-btn {
+    background: #ccc;
+}
+
+.confirm-btn {
+    background: #d9534f;
+    color: white;
+}
+
+
+
+  
+
+/* Стили для модальных окон */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 1000;
+    left: 50%; /* Центровка по горизонтали */
+    top: 50%; /* Центровка по вертикали */
+    transform: translate(-50%, -50%); /* Смещение на половину ширины и высоты */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    width: 100%;
+    height: 100%;
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    align-items: center; /* Центрирование содержимого по вертикали */
+    display: flex; /* Используем Flexbox для выравнивания */
+}
+
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #ff0000;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cancel-btn, .confirm-btn {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+}
+
+.confirm-btn {
+    background-color: #ff5555;
+    color: white;
+}
+
+.confirm-btn:hover {
+    background-color: #ff0000;
+}
+
+/* Стили для формы редактирования заказа */
+#edit-order-modal .modal-content {
+    width: 100%;
+    max-width: 600px;
+}
+
+#edit-order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#edit-order-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+#edit-order-form input, #edit-order-form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#edit-order-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#edit-order-form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.notifications {
+    width: 100%; /* Уведомление занимает всю ширину страницы */
+    background-color: aquamarine; /* Фон уведомления */
+    padding: 10px 20px; /* Отступы внутри уведомления */
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение контента */
+    align-items: center; /* Центрирование по вертикали */
+    font-size: large; /* Размер шрифта */
+    box-sizing: border-box; /* Учитываем отступы и границы в ширине */
+    position: sticky; /* Фиксируем уведомление в верхней части экрана */
+    left: 0; /* Привязываем уведомление к левому краю */
+    z-index: 1000; /* Отображение поверх других элементов */
+}
+
+.notifications button {
+    border: none; /* Убираем границу кнопки */
+    background-color: transparent; /* Прозрачный фон кнопки */
+    color: black; /* Цвет текста кнопки */
+    font-size: large; /* Размер шрифта кнопки */
+    cursor: pointer; /* Указатель при наведении */
+    padding: 0 10px; /* Отступы внутри кнопки */
+    margin-left: 1500px;
+}
+
+.notifications button:hover {
+    color: red; /* Изменение цвета текста кнопки при наведении */
+}
+
+.close-btn {
+    border: none; /* Убираем границу кнопки */
+    background-color: transparent; /* Прозрачный фон кнопки */
+    color: black; /* Цвет текста кнопки */
+    font-size: large; /* Размер шрифта кнопки */
+    cursor: pointer; /* Указатель при наведении */
+    padding: 0 10px; /* Отступы внутри кнопки */
+    margin-left: 1500px;
+}
+
+.close-btn:hover {
+    color: red; /* Изменение цвета при наведении */
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    /* Общие стили */
+    body {
+        font-size: 14px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-container .logo img {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .header-container .search-bar {
+        width: 90%; /* Уменьшаем ширину строки поиска */
+    }
+
+    .header-container .search-bar input {
+        height: 35px; /* Увеличиваем высоту для удобства */
+    }
+
+    .header-container .search-bar button {
+        height: 40px; /* Увеличиваем размер кнопки */
+        padding: 0 15px; /* Корректируем отступы */
+    }
+
+    .header-icons img {
+        width: 40px; /* Уменьшаем размер иконок */
+        margin-left: 10px;
+    }
+
+    .wrapper {
+        width: 95%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .orders-table th, .orders-table td {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .modal-content {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    #edit-order-form {
+        gap: 5px; /* Уменьшаем расстояние между полями */
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    /* Уведомления */
+    .notifications {
+        font-size: 14px;
+        flex-wrap: wrap;
+    }
+
+    .notifications button {
+        margin-left: 0; /* Центрируем кнопку */
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container .search-bar {
+        flex-direction: column;
+        width: 100%; /* Используем всю ширину */
+        gap: 5px;
+    }
+
+    .header-container .search-bar button {
+        width: 100%; /* Кнопка занимает всю ширину */
+    }
+
+    .header-container {
+        padding: 10px 5px; /* Уменьшаем отступы */
+    }
+
+    .header-container .logo img {
+        width: 120px; /* Еще меньше размер логотипа */
+    }
+
+    .header-icons img {
+        width: 35px; /* Сокращаем размер иконок еще больше */
+    }
+
+    .orders-table th, .orders-table td {
+        font-size: 10px; /* Уменьшаем размер текста */
+        padding: 3px;
+    }
+
+    .modal-content {
+        padding: 15px; /* Уменьшаем внутренние отступы */
+    }
+
+    footer {
+        padding: 8px 0; /* Уменьшаем отступы */
+    }
+}
